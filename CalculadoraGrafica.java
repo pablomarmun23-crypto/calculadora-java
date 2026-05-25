@@ -4,12 +4,16 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
+import java.awt.Font;
+import java.awt.Dimension;
 public class CalculadoraGrafica {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Calculadora");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(300, 200);
         JTextField pantalla = new JTextField();
+        pantalla.setFont(new Font("Arial", Font.BOLD, 15));
+        pantalla.setPreferredSize(new Dimension(180, 40));
         JPanel panelBotones = new JPanel();
         frame.add(pantalla, BorderLayout.NORTH);
         frame.add(panelBotones, BorderLayout.CENTER);
